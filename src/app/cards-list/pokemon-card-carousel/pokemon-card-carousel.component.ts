@@ -23,6 +23,19 @@ export class PokemonCardCarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.platformWidth)
+  }
+
+  getSlidesPerView() {
+    if (this.platformWidth <= 328) {
+      return 1
+    } else if (this.platformWidth > 328 && this.platformWidth <= 383) {
+      return 1.2
+    } else if (this.platformWidth >= 383 && this.platformWidth <= 433) {
+      return 1.3 
+    } else {
+      return 2.2
+    }
   }
 
 }
