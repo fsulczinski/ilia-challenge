@@ -27,7 +27,9 @@ export class CardsListComponent implements OnInit {
       "id": "xy1-1",
       "name": "Venusaur-EX",
       "types": [
-        "Grass"
+        "Grass",
+        "Venom",
+        "Steel"
       ],
       "images": {
         "small": "https://images.pokemontcg.io/xy1/1.png",

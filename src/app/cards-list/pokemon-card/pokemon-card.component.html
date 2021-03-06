@@ -1,33 +1,21 @@
 <div class="pokemon-card-container">
     <div class="card-content">
         <img [src]="pokemon.images.small" alt="Pokemon Card Illustration">
-    </div>
 
-    <div class="card-footer">
-        <div class="info-item">
-            <div class="info-label">
-                ID
+        <div class="pokemon-profile">
+            <div class="pokemon-id-item">
+                <span class="label">ID:</span> {{pokemon.id}}
             </div>
-            <div class="info-value">
-                {{pokemon.id}}
-            </div>
-        </div>
-        <div class="info-item name">
-            <div class="info-label">
-                Nome
-            </div>
-            <div class="info-value">
+
+            <h2 class="pokemon-name">
                 {{pokemon.name}}
-            </div>
-        </div>
+            </h2>
 
-        <div class="info-item">
-            <div class="info-label">
-                Tipos
+            <h3 class="profile-subtitle">Tipos:</h3>
+            <div class="pokemon-types-wrapper">
+                <div class="pokemon-type-item" *ngFor="let t of pokemon.types">{{t}}</div>
             </div>
-            <div class="info-value" *ngFor="let t of pokemon.types">
-                {{t}}
-            </div>
+
         </div>
     </div>
 </div>
