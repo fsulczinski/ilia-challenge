@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cards-list',
@@ -6,9 +6,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards-list.component.scss']
 })
 
+
 export class CardsListComponent implements OnInit {
 
-  pokemonCards = [
+  public platformWidth: any;
+
+  public pokemonCards = [
+    {
+      "id": "xy1-1",
+      "name": "Venusaur-EX",
+      "types": [
+        "Grass"
+      ],
+      "images": {
+        "small": "https://images.pokemontcg.io/xy1/1.png",
+        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+      }
+    },
+    {
+      "id": "xy1-1",
+      "name": "Venusaur-EX",
+      "types": [
+        "Grass"
+      ],
+      "images": {
+        "small": "https://images.pokemontcg.io/xy1/1.png",
+        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+      }
+    },
+    {
+      "id": "xy1-1",
+      "name": "Venusaur-EX",
+      "types": [
+        "Grass"
+      ],
+      "images": {
+        "small": "https://images.pokemontcg.io/xy1/1.png",
+        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+      }
+    },
+    {
+      "id": "xy1-1",
+      "name": "Venusaur-EX",
+      "types": [
+        "Grass"
+      ],
+      "images": {
+        "small": "https://images.pokemontcg.io/xy1/1.png",
+        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+      }
+    },
     {
       "id": "xy1-1",
       "name": "Venusaur-EX",
@@ -36,6 +83,7 @@ export class CardsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.pokemonCards)
   }
 
 }

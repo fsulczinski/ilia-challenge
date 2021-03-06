@@ -11,3 +11,9 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.swiper-scrollbar {
+  .swiper-scrollbar-drag {
+    background-color: var(--app-color-primary-tint);
+  }
+}
