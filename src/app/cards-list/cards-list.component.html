@@ -1,1 +1,2 @@
-<app-pokemon-card-carousel [pokemonCards]="pokemonCards"></app-pokemon-card-carousel>
+<app-pokemon-card-carousel [pokemonCards]="pokemonCards" *ngIf="platformWidth <= 776"></app-pokemon-card-carousel>
+<app-pokemon-card-grid [pokemonCards]="pokemonCards" *ngIf="platformWidth > 776"></app-pokemon-card-grid>

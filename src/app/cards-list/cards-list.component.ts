@@ -9,7 +9,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 export class CardsListComponent implements OnInit {
 
-  public platformWidth: any;
+  public platformWidth = window.innerWidth;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.platformWidth = event.target.innerWidth;
+    console.log(this.platformWidth)
+  }
 
   public pokemonCards = [
     {
@@ -79,12 +85,23 @@ export class CardsListComponent implements OnInit {
         "large": "https://images.pokemontcg.io/xy1/1_hires.png"
       }
     },
+    {
+      "id": "xy1-1",
+      "name": "Venusaur-EX",
+      "types": [
+        "Grass"
+      ],
+      "images": {
+        "small": "https://images.pokemontcg.io/xy1/1.png",
+        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+      }
+    },
   ]
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.pokemonCards)
+    console.log(this.platformWidth)
   }
 
 }

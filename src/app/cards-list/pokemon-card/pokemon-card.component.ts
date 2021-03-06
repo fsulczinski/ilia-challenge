@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonCardComponent implements OnInit {
 
   @Input() public pokemon: any;
+  @Input() public platformWidth: any;
 
   constructor() { }
 

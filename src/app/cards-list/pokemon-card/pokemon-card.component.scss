@@ -8,6 +8,14 @@
   box-shadow: 0 8px 24px -12px rgb(0 0 0 / 80%);
   cursor: pointer;
 
+  &.offset-top {
+    margin-top: 1rem;
+
+    &:last-child {
+      margin-left: 1.5rem;
+    }
+  }
+
   .card-content {
     display: flex;
     justify-content: space-between;
