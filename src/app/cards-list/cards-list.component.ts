@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CardsListService } from './cards-list.service';
 
 @Component({
   selector: 'app-cards-list',
@@ -17,91 +19,95 @@ export class CardsListComponent implements OnInit {
     console.log(this.platformWidth)
   }
 
-  public pokemonCards = [
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass",
-        "Venom"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-    {
-      "id": "xy1-1",
-      "name": "Venusaur-EX",
-      "types": [
-        "Grass"
-      ],
-      "images": {
-        "small": "https://images.pokemontcg.io/xy1/1.png",
-        "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-      }
-    },
-  ]
+  // public pokemonCards = [
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass",
+  //       "Venom"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  //   {
+  //     "id": "xy1-1",
+  //     "name": "Venusaur-EX",
+  //     "types": [
+  //       "Grass"
+  //     ],
+  //     "images": {
+  //       "small": "https://images.pokemontcg.io/xy1/1.png",
+  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
+  //     }
+  //   },
+  // ]
 
-  constructor() { }
+  public pokemonCards: any;
+
+  constructor(private cardsListService: CardsListService) { }
 
   ngOnInit(): void {
-    console.log(this.platformWidth)
+    this.cardsListService.getPokemonCards().subscribe((res: any) => {
+      this.pokemonCards = res.data
+    })
   }
 
 }
