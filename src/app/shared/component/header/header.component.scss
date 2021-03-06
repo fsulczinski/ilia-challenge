@@ -1,0 +1,14 @@
+.header-container {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  background: var(--app-color-secondary);
+  box-sizing: border-box;
+
+  .logo {
+    width: 140px;
+  }
+}
