@@ -6,6 +6,7 @@
   width: var(--card-width);
   border: solid 4px var(--app-color-primary);
   box-shadow: 0 12px 8px -8px rgba(var(--app-color-primary-rgb), .5);
+  cursor: pointer;
 
   .card-content {
     display: flex;
