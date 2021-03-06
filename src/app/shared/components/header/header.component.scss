@@ -8,6 +8,10 @@
   background: var(--app-color-secondary);
   box-sizing: border-box;
 
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   .logo {
     width: 140px;
   }
