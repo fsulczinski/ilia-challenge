@@ -2,10 +2,11 @@
   width: 100vw;
   height: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   padding: 0 2rem;
-  background: var(--app-color-secondary);
+  background: var(--app-color-primary-shade);
   box-sizing: border-box;
 
   @media screen and (max-width: 768px) {
@@ -13,6 +14,17 @@
   }
 
   .logo {
-    width: 140px;
+    color: #ffffff;
+    text-align: left;
+ 
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: .8rem;
+    }
   }
 }

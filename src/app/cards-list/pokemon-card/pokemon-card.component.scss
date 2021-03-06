@@ -5,7 +5,8 @@
   border-radius: 12px;
   width: var(--card-width);
   border: solid 4px var(--app-color-primary);
-  box-shadow: 0 12px 8px -8px rgba(var(--app-color-primary-rgb), .5);
+  box-shadow: 0 12px 8px -8px rgba(var(--app-color-primary-rgb), 0.5);
+  background: var(--app-color-primary-tint);
   cursor: pointer;
 
   .card-content {
@@ -27,7 +28,7 @@
 
     .info-item {
       &:last-child {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
       }
       .info-label {
         font-weight: 700;
