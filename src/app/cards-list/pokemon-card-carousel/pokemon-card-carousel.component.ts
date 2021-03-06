@@ -25,7 +25,7 @@ export class PokemonCardCarouselComponent implements OnInit {
   }
 
   getSlidesPerView() {
-    if (this.platformWidth <= 328) {
+    if (this.platformWidth <= 332) {
       return 1
     } else if (this.platformWidth > 328 && this.platformWidth <= 383) {
       return 1.2
