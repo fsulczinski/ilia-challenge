@@ -16,7 +16,7 @@ export class CardsListService {
 
     const params = new HttpParams()
       .set('page', '1')
-      .set('pageSize', '50');
+      .set('pageSize', '25');
 
 
     return this.http.get(environment.pokemonAPIBaseURL + '/cards', { headers, params });
