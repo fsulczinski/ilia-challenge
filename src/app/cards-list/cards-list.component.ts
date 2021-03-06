@@ -28,8 +28,7 @@ export class CardsListComponent implements OnInit {
       "name": "Venusaur-EX",
       "types": [
         "Grass",
-        "Venom",
-        "Steel"
+        "Venom"
       ],
       "images": {
         "small": "https://images.pokemontcg.io/xy1/1.png",
