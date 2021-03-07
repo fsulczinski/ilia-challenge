@@ -20,12 +20,30 @@
     display: flex;
     justify-content: space-between;
 
-    img {
-      display: block;
+    .card-illustration-container {
       width: 120px;
-      height: 180px;
-      box-shadow: 0 8px 8px -8px rgb(0 0 0 / 80%);
+      height: 166px;
       border-radius: 8px;
+      overflow: hidden;
+      background: var(--app-color-primary-tint);
+      box-shadow: 0 8px 8px -8px rgb(0 0 0 / 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.apply-border {
+        box-sizing: border-box;
+        border: solid 2px var(--app-color-primary);
+      }
+
+      img {
+        display: none;
+        width: 100%;
+
+        &.visible {
+          display: block;
+        }
+      }
     }
   }
 
@@ -77,7 +95,7 @@
 
       .pokemon-type-item {
         margin: 0.3rem 0.5rem 0 0;
-        padding: 0.3rem .5rem;
+        padding: 0.3rem 0.5rem;
         border-radius: 10px;
         font-size: 0.75rem;
         text-transform: uppercase;
