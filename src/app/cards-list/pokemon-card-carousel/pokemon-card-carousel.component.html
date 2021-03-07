@@ -1,0 +1,5 @@
+<swiper [centeredSlides]="true" [slidesPerView]="getSlidesPerView()" [scrollbar]="true">
+    <ng-template swiperSlide *ngFor="let p of pokemonCards">
+        <app-pokemon-card [pokemon]="p"></app-pokemon-card>
+    </ng-template>
+</swiper>

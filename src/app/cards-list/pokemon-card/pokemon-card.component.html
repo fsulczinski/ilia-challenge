@@ -1,0 +1,21 @@
+<div class="pokemon-card-container" [ngClass]="{'offset-top': platformWidth && platformWidth > 768}">
+    <div class="card-content">
+        <img [src]="pokemon.images.small" alt="Pokemon Card Illustration">
+
+        <div class="pokemon-profile">
+            <div class="pokemon-id-item">
+                <span class="label">ID:</span> {{pokemon.id}}
+            </div>
+
+            <h2 class="pokemon-name">
+                {{pokemon.name}}
+            </h2>
+
+            <h3 class="profile-subtitle">Tipos:</h3>
+            <div class="pokemon-types-wrapper">
+                <div class="pokemon-type-item" *ngFor="let t of pokemon.types">{{t}}</div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.header-container {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  background: var(--app-color-primary-shade);
+  box-sizing: border-box;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
+  .logo {
+    color: #ffffff;
+    text-align: right;
+ 
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+      font-size: .8rem;
+    }
+  }
+}
