@@ -1,0 +1,44 @@
+<div class="card-detail-container">
+    <div class="pokemon-profile">
+        <h3 class="pokemon-id">#{{pokemonCard?.id}}</h3>
+        <h1 class="pokemon-name">
+            {{pokemonCard?.name}}
+        </h1>
+    </div>
+
+    <img [src]="pokemonCard?.images.large" alt="Pokémon card illustration" class="pokemon-card-illustration">
+
+    <div class="divider"></div>
+
+    <!-- TYPE ATTRIBUTES CONTAINER -->
+    <div class="attributes-container">
+        <div class="attribute-title">Tipos:</div>
+        <div class="types-container">
+            <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
+                {{ t }}
+            </div>
+        </div>
+    </div>
+
+    <!-- RESISTANCES ATTRIBUTES CONTAINER -->
+    <div class="attributes-container">
+        <div class="attribute-title">Ressistências:</div>
+        <div class="types-container">
+            <div class="attribute-item" *ngFor="let r of pokemonCard?.resistances">
+                {{ r.type }}
+            </div>
+        </div>
+    </div>
+
+    <!-- WEAKNESSES ATTRIBUTES CONTAINER -->
+    <div class="attributes-container">
+        <div class="attribute-title">Fraquezas:</div>
+        <div class="types-container">
+            <div class="attribute-item" *ngFor="let w of pokemonCard?.weaknesses">
+                {{ w.type }}
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+</div>

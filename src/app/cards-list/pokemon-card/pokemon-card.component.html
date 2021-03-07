@@ -1,4 +1,4 @@
-<div class="pokemon-card-container" [ngClass]="{'offset-top': platformWidth && platformWidth > 768}">
+<div class="pokemon-card-container" [ngClass]="{'offset-top': platformWidth && platformWidth > 768}" [routerLink]="['card', pokemon.id]">
     <div class="card-content">
         <img [src]="pokemon.images.small" alt="Pokemon Card Illustration">
 

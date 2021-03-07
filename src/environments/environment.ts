@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   pokemonAPIBaseURL: 'https://api.pokemontcg.io/v2/',
-  apiKey: ''
+  apiKey: '9493b8f6-c8a2-4aba-8f0e-5dcf8f4aec43'
 };
 
 /*

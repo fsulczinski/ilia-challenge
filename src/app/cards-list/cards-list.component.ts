@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { CardsListService } from './cards-list.service';
+
+import { CardsService } from './cards.service';
 
 @Component({
   selector: 'app-cards-list',
@@ -11,6 +11,7 @@ import { CardsListService } from './cards-list.service';
 
 export class CardsListComponent implements OnInit {
 
+  public pokemonCards: any;
   public platformWidth = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])
@@ -19,93 +20,10 @@ export class CardsListComponent implements OnInit {
     console.log(this.platformWidth)
   }
 
-  // public pokemonCards = [
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass",
-  //       "Venom"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  //   {
-  //     "id": "xy1-1",
-  //     "name": "Venusaur-EX",
-  //     "types": [
-  //       "Grass"
-  //     ],
-  //     "images": {
-  //       "small": "https://images.pokemontcg.io/xy1/1.png",
-  //       "large": "https://images.pokemontcg.io/xy1/1_hires.png"
-  //     }
-  //   },
-  // ]
-
-  public pokemonCards: any;
-
-  constructor(private cardsListService: CardsListService) { }
+  constructor(private cardsService: CardsService) { }
 
   ngOnInit(): void {
-    this.cardsListService.getPokemonCards().subscribe((res: any) => {
+    this.cardsService.getPokemonCards().subscribe((res: any) => {
       this.pokemonCards = res.data
     })
   }

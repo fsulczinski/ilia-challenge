@@ -7,6 +7,7 @@ import { CardsListComponent } from './cards-list.component';
 import { PokemonCardCarouselComponent } from './pokemon-card-carousel/pokemon-card-carousel.component';
 import { PokemonCardGridComponent } from './pokemon-card-grid/pokemon-card-grid.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 
 
 
@@ -15,7 +16,8 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
     CardsListComponent,
     PokemonCardComponent,
     PokemonCardCarouselComponent,
-    PokemonCardGridComponent
+    PokemonCardGridComponent,
+    CardDetailComponent
   ],
   imports: [
     CommonModule,
