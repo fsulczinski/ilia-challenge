@@ -58,6 +58,11 @@
       margin-bottom: 0.5rem;
     }
 
+    .items-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     .attribute-item {
       margin-right: 0.5rem;
       padding: 0.3rem 0.5rem;
@@ -72,6 +77,9 @@
       box-sizing: border-box;
 
       &.attack-item {
+        margin-top: 0.5rem;
+        cursor: pointer;
+
         fa-icon {
           margin-left: 0.2rem;
 
@@ -80,10 +88,6 @@
           }
         }
       }
-    }
-
-    .types-container {
-      display: flex;
     }
   }
 }
@@ -94,7 +98,7 @@
     align-items: center;
 
     .pokemon-profile {
-      width: 50%;
+      width: 40%;
 
       .pokemon-id {
         font-size: 1.5rem;
@@ -135,47 +139,18 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .card-detail-container {
-    justify-content: space-between;
-    padding: 4rem 6rem;
-
     .pokemon-profile {
       width: 33%;
-    }
-
-    .attributes-wrapper {
-      .attributes-container {
-        .attribute-item {
-          font-size: 0.9rem;
-        }
-      }
-    }
-
-    .divider {
-      display: none;
     }
   }
 }
 
 @media screen and (min-width: 1440px) {
   .card-detail-container {
-    padding: 4rem 10rem;
-
     .pokemon-profile {
       width: 25%;
-    }
-
-    .attributes-wrapper {
-      .attributes-container {
-        .attribute-item {
-          font-size: 0.9rem;
-        }
-      }
-    }
-
-    .divider {
-      display: none;
     }
   }
 }
