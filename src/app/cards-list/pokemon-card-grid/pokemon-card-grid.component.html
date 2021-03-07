@@ -1,3 +1,3 @@
-<div class="pokemon-grid-container">
+<div class="pokemon-grid-container" [ngClass]="{'flex-fix': pokemonCards.length % 5 !== 0}">
     <app-pokemon-card [pokemon]="p" [platformWidth]="platformWidth" *ngFor="let p of pokemonCards"></app-pokemon-card>
 </div>
