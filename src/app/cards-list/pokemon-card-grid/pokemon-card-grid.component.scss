@@ -3,10 +3,5 @@
   display: flex;
   flex-flow: row wrap;
   margin: 2rem auto;
-  justify-content: space-between;
-
-  &::after {
-    content: "";
-    flex: auto;
-  }
+  justify-content: space-evenly;
 }

@@ -19,13 +19,11 @@ export class CardsService {
       .set('page', '1')
       .set('pageSize', '25');
 
-
     return this.http.get(environment.pokemonAPIBaseURL + '/cards', { headers, params });
   }
 
   getPokemonCardById(id: string): Observable<any> {
     const headers = new HttpHeaders().set('X-Api-Key', environment.apiKey);
-
     return this.http.get(environment.pokemonAPIBaseURL + '/cards/' + id, { headers });
   }
 
