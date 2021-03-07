@@ -11,9 +11,10 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 })
 export class CardDetailComponent implements OnInit {
 
-  public faAngleRight = faAngleRight;
-  public pokemonId: string = '';
-  public pokemonCard: any;
+  faAngleRight = faAngleRight;
+  pokemonId: string = '';
+  pokemonCard: any;
+  isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute, private cardsService: CardsService) { }
 
@@ -24,6 +25,10 @@ export class CardDetailComponent implements OnInit {
       this.pokemonCard = res['data'];
       console.log(this.pokemonCard)
     })
+  }
+
+  onImageLoad() {
+    this.isLoading = false;
   }
 
 }

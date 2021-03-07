@@ -5,7 +5,11 @@
             {{pokemonCard?.name}}
         </h1>
 
-        <img [src]="pokemonCard?.images.large" alt="Pokémon card illustration" class="pokemon-card-illustration">
+        <div class="pokemon-card-illustration-container">
+            <app-loader *ngIf="isLoading"></app-loader>
+            <img [src]="pokemonCard?.images.large" [ngClass]="{'visible': !isLoading}" (load)="onImageLoad()"
+                alt="Pokémon card illustration" class="pokemon-card-illustration">
+        </div>
     </div>
 
 
