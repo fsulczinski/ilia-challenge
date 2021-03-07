@@ -9,8 +9,13 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: "Nunito", sans-serif;
   background: var(--app-color-primary);
+  background-image: url("assets/images/pokeball.svg");
+  background-repeat: no-repeat;
+  background-position: right 170%;
+  background-size: 50%;
 }
 
 .swiper-scrollbar {

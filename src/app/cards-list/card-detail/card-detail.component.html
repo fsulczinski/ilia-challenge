@@ -4,55 +4,58 @@
         <h1 class="pokemon-name">
             {{pokemonCard?.name}}
         </h1>
+
+        <img [src]="pokemonCard?.images.large" alt="Pokémon card illustration" class="pokemon-card-illustration">
     </div>
 
-    <img [src]="pokemonCard?.images.large" alt="Pokémon card illustration" class="pokemon-card-illustration">
 
     <div class="divider"></div>
 
-    <!-- TYPE ATTRIBUTES CONTAINER -->
-    <div class="attributes-container">
-        <div class="attribute-title">Tipos:</div>
-        <div class="types-container">
-            <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
-                {{ t }}
+    <div class="attributes-wrapper">
+
+        <!-- TYPE ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Tipos:</div>
+            <div class="types-container">
+                <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
+                    {{ t }}
+                </div>
+            </div>
+        </div>
+
+        <!-- RESISTANCES ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Ressistências:</div>
+            <div class="types-container">
+                <div class="attribute-item" *ngFor="let r of pokemonCard?.resistances">
+                    {{ r.type }}
+                </div>
+            </div>
+        </div>
+
+        <!-- WEAKNESSES ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Fraquezas:</div>
+            <div class="types-container">
+                <div class="attribute-item" *ngFor="let w of pokemonCard?.weaknesses">
+                    {{ w.type }}
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ATTACKS CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Ataques:</div>
+            <div class="types-container">
+                <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks">
+                    {{ a.name }}
+                    <fa-icon [icon]="faAngleRight"></fa-icon>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- RESISTANCES ATTRIBUTES CONTAINER -->
-    <div class="attributes-container">
-        <div class="attribute-title">Ressistências:</div>
-        <div class="types-container">
-            <div class="attribute-item" *ngFor="let r of pokemonCard?.resistances">
-                {{ r.type }}
-            </div>
-        </div>
-    </div>
-
-    <!-- WEAKNESSES ATTRIBUTES CONTAINER -->
-    <div class="attributes-container">
-        <div class="attribute-title">Fraquezas:</div>
-        <div class="types-container">
-            <div class="attribute-item" *ngFor="let w of pokemonCard?.weaknesses">
-                {{ w.type }}
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- ATTACKS CONTAINER -->
-    <div class="attributes-container">
-        <div class="attribute-title">Ataques:</div>
-        <div class="types-container">
-            <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks">
-                {{ a.name }} 
-                <fa-icon [icon]="faAngleRight"></fa-icon>
-            </div>
-        </div>
-    </div>
-
 
 
 
