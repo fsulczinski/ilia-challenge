@@ -16,8 +16,7 @@ export class PokemonCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onImageLoad(ev: Event) {
-    console.log(ev)
+  onImageLoad() {
     this.isLoading = false;
   }
 

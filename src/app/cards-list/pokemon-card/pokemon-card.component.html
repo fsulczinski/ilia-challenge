@@ -4,7 +4,7 @@
 
         <div class="card-illustration-container" [ngClass]="{'apply-border': isLoading}">
             <app-loader *ngIf="isLoading"></app-loader>
-            <img [src]="pokemon.images.small" [ngClass]="{'visible': !isLoading}" (load)="onImageLoad($event)" alt="Pokemon Card Illustration">
+            <img [src]="pokemon.images.small" [ngClass]="{'visible': !isLoading}" (load)="onImageLoad()" alt="Pokemon Card Illustration">
         </div>
 
         <div class="pokemon-profile">
