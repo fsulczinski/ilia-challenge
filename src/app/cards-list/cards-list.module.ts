@@ -8,6 +8,7 @@ import { PokemonCardCarouselComponent } from './pokemon-card-carousel/pokemon-ca
 import { PokemonCardGridComponent } from './pokemon-card-grid/pokemon-card-grid.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -22,6 +23,7 @@ import { CardDetailComponent } from './card-detail/card-detail.component';
   imports: [
     CommonModule,
     CardsListRoutingModule,
+    FontAwesomeModule,
     SwiperModule
   ],
   exports: [CardsListComponent]

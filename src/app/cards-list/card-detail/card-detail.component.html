@@ -41,4 +41,19 @@
     </div>
 
     <div class="divider"></div>
+
+    <!-- ATTACKS CONTAINER -->
+    <div class="attributes-container">
+        <div class="attribute-title">Ataques:</div>
+        <div class="types-container">
+            <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks">
+                {{ a.name }} 
+                <fa-icon [icon]="faAngleRight"></fa-icon>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </div>

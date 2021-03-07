@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardsService } from '../cards.service';
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-card-detail',
@@ -10,8 +11,9 @@ import { CardsService } from '../cards.service';
 })
 export class CardDetailComponent implements OnInit {
 
-  pokemonId: string = '';
-  pokemonCard: any;
+  public faAngleRight = faAngleRight;
+  public pokemonId: string = '';
+  public pokemonCard: any;
 
   constructor(private route: ActivatedRoute, private cardsService: CardsService) { }
 
