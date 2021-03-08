@@ -7,11 +7,11 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 })
 export class PokemonCardGridComponent implements OnInit {
 
-  @Input() public pokemonCards: Array<{}> = []
+  @Input() public pokemonCards: Array<{}> = [];
   public platformWidth = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
+  onResize(event: any): void {
     this.platformWidth = event.target.innerWidth;
   }
 

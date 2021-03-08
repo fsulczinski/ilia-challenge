@@ -15,7 +15,7 @@ export class PokemonCardCarouselComponent implements OnInit {
   public platformWidth = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
+  onResize(event: any): void {
     this.platformWidth = event.target.innerWidth;
   }
 
@@ -24,15 +24,15 @@ export class PokemonCardCarouselComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getSlidesPerView() {
+  getSlidesPerView(): number {
     if (this.platformWidth <= 332) {
-      return 1
+      return 1;
     } else if (this.platformWidth > 328 && this.platformWidth <= 383) {
-      return 1.2
+      return 1.2;
     } else if (this.platformWidth >= 383 && this.platformWidth <= 433) {
-      return 1.3
+      return 1.3;
     } else {
-      return 2.2
+      return 2.2;
     }
   }
 

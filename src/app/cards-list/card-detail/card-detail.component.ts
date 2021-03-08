@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardsService } from '../cards.service';
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -14,30 +14,29 @@ import { TranslateService } from '@ngx-translate/core';
 export class CardDetailComponent implements OnInit {
 
   public faAngleRight = faAngleRight;
-  public pokemonId: string = '';
+  public pokemonId = '';
   public pokemonCard: any;
   public selectedAttack = {};
-  public isLoading: boolean = true;
-  public isModalAttackDetailVisible: boolean = false;
+  public isLoading = true;
+  public isModalAttackDetailVisible = false;
 
   constructor(private route: ActivatedRoute, private cardsService: CardsService, private translateService: TranslateService) {
     this.translateService.use(localStorage.getItem('app-language') || 'en');
   }
 
   ngOnInit(): void {
-    this.pokemonId = this.route.snapshot.params['id'];
+    this.pokemonId = this.route.snapshot.params.id;
 
     this.cardsService.getPokemonCardById(this.pokemonId).subscribe(res => {
-      this.pokemonCard = res['data'];
-      console.log(this.pokemonCard)
-    })
+      this.pokemonCard = res.data;
+    });
   }
 
-  onImageLoad() {
+  onImageLoad(): void {
     this.isLoading = false;
   }
 
-  toggleModalAttackDetail(isVisible: boolean, attack?: any) {
+  toggleModalAttackDetail(isVisible: boolean, attack?: any): void {
     this.isModalAttackDetailVisible = isVisible;
 
     if (this.isModalAttackDetailVisible) {
@@ -48,7 +47,7 @@ export class CardDetailComponent implements OnInit {
     }
   }
 
-  toggleBodyScroll(param: boolean) {
+  toggleBodyScroll(param: boolean): void {
     if (param) {
       document.body.classList.add('lock-scroll-y');
     } else {

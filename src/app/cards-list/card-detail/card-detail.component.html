@@ -19,7 +19,7 @@
 
         <!-- TYPE ATTRIBUTES CONTAINER -->
         <div class="attributes-container">
-            <div class="attribute-title">{{'types' |  translate}}:</div>
+            <div class="attribute-title">{{'types' | translate}}:</div>
             <div class="items-container">
                 <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
                     {{ t | translate}}
@@ -63,4 +63,5 @@
     </div>
 </div>
 
-<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible" (onClose)="toggleModalAttackDetail($event)"></app-modal-attack-detail>
+<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible"
+    (closed)="toggleModalAttackDetail($event)"></app-modal-attack-detail>

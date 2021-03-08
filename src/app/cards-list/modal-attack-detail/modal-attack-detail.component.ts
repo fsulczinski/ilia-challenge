@@ -10,22 +10,21 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class ModalAttackDetailComponent implements OnInit {
 
   @Input() attack: any;
-  @Output() onClose = new EventEmitter();
-  public faTimes = faTimes
+  @Output() closed = new EventEmitter();
+  public faTimes = faTimes;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.attack);
   }
 
-  parseEnergyCostImg(name: string) {
-    const imgURL = '/assets/images/energy-types/'+ name.toLowerCase() + '.svg';
+  parseEnergyCostImg(name: string): string {
+    const imgURL = '/assets/images/energy-types/' + name.toLowerCase() + '.svg';
     return imgURL;
   }
 
-  dismissModal() {
-    this.onClose.emit(false);
+  dismissModal(): void {
+    this.closed.emit(false);
   }
 
 }

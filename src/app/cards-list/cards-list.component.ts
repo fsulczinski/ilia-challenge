@@ -15,17 +15,16 @@ export class CardsListComponent implements OnInit {
   public platformWidth = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
+  onResize(event: any): void {
     this.platformWidth = event.target.innerWidth;
-    console.log(this.platformWidth)
   }
 
   constructor(private cardsService: CardsService) { }
 
   ngOnInit(): void {
     this.cardsService.getPokemonCards().subscribe((res: any) => {
-      this.pokemonCards = res.data
-    })
+      this.pokemonCards = res.data;
+    });
   }
 
 }
