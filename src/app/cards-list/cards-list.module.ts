@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SwiperModule } from 'swiper/angular';
-import { LoaderModule } from '../loader/loader.module';
 
+import { LoaderModule } from '../loader/loader.module';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardsListRoutingModule } from './cards-list-routing.module';
 import { CardsListComponent } from './cards-list.component';
+import { ModalAttackDetailComponent } from './modal-attack-detail/modal-attack-detail.component';
 import { PokemonCardCarouselComponent } from './pokemon-card-carousel/pokemon-card-carousel.component';
 import { PokemonCardGridComponent } from './pokemon-card-grid/pokemon-card-grid.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
-import { ModalAttackDetailComponent } from './modal-attack-detail/modal-attack-detail.component';
 
 
 
@@ -25,6 +26,7 @@ import { ModalAttackDetailComponent } from './modal-attack-detail/modal-attack-d
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CardsListRoutingModule,
     FontAwesomeModule,
     LoaderModule,

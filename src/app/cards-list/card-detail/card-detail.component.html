@@ -63,4 +63,4 @@
     </div>
 </div>
 
-<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible" (onClose)="toggleModalAttackDetail($event)"></app-modal-attack-detail>
+<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible" (modalClosed)="toggleModalAttackDetail($event)"></app-modal-attack-detail>
