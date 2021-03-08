@@ -18,7 +18,7 @@
       height: 48px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding: 0 1rem;
       box-sizing: border-box;
 
@@ -26,6 +26,11 @@
         font-weight: 600;
         font-size: 1.3rem;
         color: var(--app-color-light);
+        text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+      }
+
+      fa-icon {
+        cursor: pointer;
       }
     }
 
@@ -51,6 +56,7 @@
         .subtitle {
           font-weight: 800;
           color: var(--app-color-light);
+          text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
         }
 
         .energy-cost-wrapper {
@@ -61,11 +67,13 @@
           justify-content: space-evenly;
 
           img {
-            width: 36px;
-            height: 36px;
+            width: 44px;
+            height: 44px;
+            margin-right: 0.5rem;
             border: solid 2px var(--app-color-light);
             border-radius: 50%;
             box-sizing: border-box;
+            box-shadow: 0 8px 8px -8px rgb(0 0 0 / 80%);
           }
         }
       }
@@ -96,6 +104,38 @@
           box-shadow: 0 8px 8px -8px rgb(0 0 0 / 80%);
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-backdrop-wrapper {
+    justify-content: flex-end;
+
+    .modal-content-container {
+      height: 100vh;
+      width: 60vw;
+      animation: slideLeft 0.3s ease-in-out;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal-backdrop-wrapper {
+    .modal-content-container {
+      width: 50vw;
+
+      .modal-content {
+        padding: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal-backdrop-wrapper {
+    .modal-content-container {
+      width: 33vw;
     }
   }
 }

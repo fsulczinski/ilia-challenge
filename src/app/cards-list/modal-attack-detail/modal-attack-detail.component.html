@@ -1,15 +1,14 @@
 <div class="modal-backdrop-wrapper">
     <div class="modal-content-container">
         <div class="modal-header">
-            <h1 class="modal-title">Attack</h1>
-            <fa-icon [icon]="faTimes" [size]="'lg'" [styles]="{'color': '#fff'}" (click)="dismissModal()"></fa-icon>
+            <fa-icon [icon]="faTimes" [size]="'2x'" [styles]="{'color': '#fff'}" (click)="dismissModal()"></fa-icon>
         </div>
 
         <div class="modal-content">
             <div class="attack-header-item">
                 <h2 class="subtitle">{{attack.name}}</h2>
-                <div class="energy-cost-wrapper" *ngFor="let c of attack.cost">
-                    <img [src]="parseEnergyCostImg(c)" alt="Energy cost">
+                <div class="energy-cost-wrapper">
+                    <img [src]="parseEnergyCostImg(c)" alt="Energy cost" *ngFor="let c of attack.cost">
                 </div>
             </div>
 
