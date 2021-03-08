@@ -31,9 +31,9 @@ export class CardsListComponent implements OnInit {
     this.cardsService.getPokemonCards().subscribe((res: any) => {
       this.pokemonCards = res.data;
     });
-      this.pokemonCards.sort((a: any, b: any) => a.name.localeCompare(b.name));
-    });
-  }
+    this.pokemonCards.sort((a: any, b: any) => a.name.localeCompare(b.name));
+  };
+
 
   onQueryEntry(): void {
     if (this.searchQuery.length >= 3) {
