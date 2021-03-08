@@ -19,7 +19,7 @@
                     DAMAGE: {{attack.damage.length ? attack.damage : '0'}}
                 </p>
 
-                <p class="description">
+                <p class="description" *ngIf="attack.text">
                     {{attack.text}}
                 </p>
             </div>

@@ -67,8 +67,8 @@
           justify-content: space-evenly;
 
           img {
-            width: 44px;
-            height: 44px;
+            width: 28px;
+            height: 28px;
             margin-right: 0.5rem;
             border: solid 2px var(--app-color-light);
             border-radius: 50%;
@@ -116,6 +116,17 @@
       height: 100vh;
       width: 60vw;
       animation: slideLeft 0.3s ease-in-out;
+
+      .modal-content {
+        .attack-header-item {
+          .energy-cost-wrapper {
+            img {
+              width: 36px;
+              height: 36px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -127,6 +138,15 @@
 
       .modal-content {
         padding: 3rem;
+
+        .attack-header-item {
+          .energy-cost-wrapper {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
       }
     }
   }
@@ -135,7 +155,7 @@
 @media screen and (min-width: 1440px) {
   .modal-backdrop-wrapper {
     .modal-content-container {
-      width: 33vw;
+      width: 40vw;
     }
   }
 }
