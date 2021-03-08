@@ -35,7 +35,7 @@ export class CardsListComponent implements OnInit {
   }
 
   onQueryEntry() {
-    if (this.searchQuery.length >= 4) {
+    if (this.searchQuery.length >= 3) {
       this.filteredPokemonCards = this.pokemonCards.filter((card: any) => card.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1);
     } else {
       this.filteredPokemonCards = this.pokemonCards;

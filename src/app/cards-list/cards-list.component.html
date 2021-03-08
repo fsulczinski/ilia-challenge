@@ -6,10 +6,9 @@
     </div>
 </div>
 
-{{searchQuery | json}}
-
 <app-pokemon-card-carousel [pokemonCards]="pokemonCards" *ngIf="platformWidth <= 776 && !searchQuery">
 </app-pokemon-card-carousel>
+
 <app-pokemon-card-grid [pokemonCards]="filteredPokemonCards ? filteredPokemonCards : pokemonCards"
     *ngIf="platformWidth > 776 || searchQuery">
 </app-pokemon-card-grid>
