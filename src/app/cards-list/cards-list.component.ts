@@ -21,29 +21,29 @@ export class CardsListComponent implements OnInit {
   public faTimes = faTimes;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
+  onResize(event: any): void {
     this.platformWidth = event.target.innerWidth;
-    console.log(this.platformWidth)
   }
 
   constructor(private cardsService: CardsService) { }
 
   ngOnInit(): void {
     this.cardsService.getPokemonCards().subscribe((res: any) => {
-      this.pokemonCards = res.data
-      this.pokemonCards.sort((a: any, b: any) => a.name.localeCompare(b.name))
-    })
+      this.pokemonCards = res.data;
+      this.pokemonCards.sort((a: any, b: any) => a.name.localeCompare(b.name));
+    });
   }
 
-  onQueryEntry() {
+  onQueryEntry(): void {
     if (this.searchQuery.length >= 3) {
-      this.filteredPokemonCards = this.pokemonCards.filter((card: any) => card.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1);
+      this.filteredPokemonCards = this.pokemonCards
+        .filter((card: any) => card.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1);
     } else {
       this.filteredPokemonCards = this.pokemonCards;
     }
   }
 
-  clearSearchQuery() {
+  clearSearchQuery(): void {
     this.searchQuery = '';
   }
 
