@@ -1,0 +1,19 @@
+<div class="modal-backdrop-wrapper">
+    <div class="modal-content-container">
+        <div class="modal-header">
+            <h1 class="modal-title">Attack</h1>
+            <fa-icon [icon]="faTimes" [size]="'lg'" [styles]="{'color': '#fff'}" (click)="dismissModal()"></fa-icon>
+        </div>
+
+        <div class="modal-content">
+            <h2 class="subtitle">{{attack.name}}</h2>
+
+            <div class="item-container item-mana-cost">
+                <p class="item-label">Mana cost:</p>
+                <div class="mana-cost-wrapper" *ngFor="let c of attack?.cost">
+                    <img [src]="parseManaCost()" alt="Mana cost">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -52,15 +52,15 @@
         <!-- ATTACKS CONTAINER -->
         <div class="attributes-container">
             <div class="attribute-title">Ataques:</div>
-            <div class="attacks-container">
-                <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks">
+            <div class="items-container">
+                <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks"
+                    (click)="toggleModalAttackDetail(true, a)">
                     {{ a.name }}
                     <fa-icon [icon]="faAngleRight"></fa-icon>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 </div>
+
+<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible" (onClose)="toggleModalAttackDetail($event)"></app-modal-attack-detail>

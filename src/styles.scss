@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
 @import "./app/theme/variables";
+@import "./app/theme/animations";
 @import "~swiper/swiper-bundle";
 
 * {
@@ -17,6 +18,11 @@ body {
   background-position: right 170%;
   background-size: 50%;
   overflow-x: hidden;
+
+  &.lock-scroll-y {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
 }
 
 .swiper-scrollbar {

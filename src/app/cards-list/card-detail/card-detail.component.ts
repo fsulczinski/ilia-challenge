@@ -9,12 +9,15 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
   templateUrl: './card-detail.component.html',
   styleUrls: ['./card-detail.component.scss']
 })
+
 export class CardDetailComponent implements OnInit {
 
-  faAngleRight = faAngleRight;
-  pokemonId: string = '';
-  pokemonCard: any;
-  isLoading: boolean = true;
+  public faAngleRight = faAngleRight;
+  public pokemonId: string = '';
+  public pokemonCard: any;
+  public selectedAttack = {};
+  public isLoading: boolean = true;
+  public isModalAttackDetailVisible: boolean = false;
 
   constructor(private route: ActivatedRoute, private cardsService: CardsService) { }
 
@@ -29,6 +32,25 @@ export class CardDetailComponent implements OnInit {
 
   onImageLoad() {
     this.isLoading = false;
+  }
+
+  toggleModalAttackDetail(isVisible: boolean, attack?: any) {
+    this.isModalAttackDetailVisible = isVisible;
+
+    if (this.isModalAttackDetailVisible) {
+      this.selectedAttack = attack;
+      this.toggleBodyScroll(true);
+    } else {
+      this.toggleBodyScroll(false);
+    }
+  }
+
+  toggleBodyScroll(param: boolean) {
+    if (param) {
+      document.body.classList.add('lock-scroll-y');
+    } else {
+      document.body.classList.remove('lock-scroll-y');
+    }
   }
 
 }
