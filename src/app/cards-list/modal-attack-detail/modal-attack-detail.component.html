@@ -6,7 +6,7 @@
 
         <div class="modal-content">
             <div class="attack-header-item">
-                <h2 class="subtitle">{{attack.name}}</h2>
+                <h2 class="subtitle">{{attack?.name}}</h2>
                 <div class="energy-cost-wrapper">
                     <img [src]="parseEnergyCostImg(c)" alt="Energy cost" *ngFor="let c of attack.cost">
                 </div>
@@ -16,7 +16,7 @@
 
             <div class="attack-info-container">
                 <p class="damage-info">
-                    DAMAGE: {{attack.damage.length ? attack.damage : '0'}}
+                    DAMAGE: {{attack?.damage.length ? attack.damage : '0'}}
                 </p>
 
                 <p class="description" *ngIf="attack.text">
