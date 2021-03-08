@@ -3,14 +3,10 @@
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 2rem;
   background: var(--app-color-primary-shade);
   box-sizing: border-box;
-
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-  }
 
   .logo {
     color: #ffffff;

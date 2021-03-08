@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { CardsService } from '../cards.service';
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-card-detail',
@@ -19,7 +20,9 @@ export class CardDetailComponent implements OnInit {
   public isLoading: boolean = true;
   public isModalAttackDetailVisible: boolean = false;
 
-  constructor(private route: ActivatedRoute, private cardsService: CardsService) { }
+  constructor(private route: ActivatedRoute, private cardsService: CardsService, private translateService: TranslateService) {
+    this.translateService.use(localStorage.getItem('app-language') || 'en');
+  }
 
   ngOnInit(): void {
     this.pokemonId = this.route.snapshot.params['id'];
