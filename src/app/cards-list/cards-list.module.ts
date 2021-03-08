@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { SwiperModule } from 'swiper/angular';
 import { HttpLoaderFactory } from '../app.module';
+
 
 import { LoaderModule } from '../loader/loader.module';
 import { CardDetailComponent } from './card-detail/card-detail.component';
@@ -28,6 +30,7 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CardsListRoutingModule,
     FontAwesomeModule,
     LoaderModule,

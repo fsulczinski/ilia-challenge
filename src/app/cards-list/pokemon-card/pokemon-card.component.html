@@ -1,7 +1,6 @@
 <div class="pokemon-card-container" [ngClass]="{'offset-top': platformWidth && platformWidth > 768}"
     [routerLink]="['card', pokemon.id]">
     <div class="card-content">
-
         <div class="card-illustration-container" [ngClass]="{'apply-border': isLoading}">
             <app-loader *ngIf="isLoading"></app-loader>
             <img [src]="pokemon.images.small" [ngClass]="{'visible': !isLoading}" (load)="onImageLoad()" alt="Pokemon Card Illustration">

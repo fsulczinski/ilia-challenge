@@ -5,6 +5,7 @@ import { CardsService } from '../cards.service';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-card-detail',
   templateUrl: './card-detail.component.html',

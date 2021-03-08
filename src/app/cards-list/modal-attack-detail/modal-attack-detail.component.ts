@@ -11,6 +11,7 @@ export class ModalAttackDetailComponent implements OnInit {
 
   @Input() attack: any;
   @Output() closed = new EventEmitter();
+  
   public faTimes = faTimes;
 
   constructor() { }
