@@ -19,7 +19,7 @@
 
         <!-- TYPE ATTRIBUTES CONTAINER -->
         <div class="attributes-container">
-            <div class="attribute-title">Tipos:</div>
+            <div class="attribute-title">Types:</div>
             <div class="items-container">
                 <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
                     {{ t }}
@@ -29,7 +29,7 @@
 
         <!-- RESISTANCES ATTRIBUTES CONTAINER -->
         <div class="attributes-container">
-            <div class="attribute-title">Ressistências:</div>
+            <div class="attribute-title">Resistances:</div>
             <div class="items-container">
                 <div class="attribute-item" *ngFor="let r of pokemonCard?.resistances">
                     {{ r.type }}
@@ -39,7 +39,7 @@
 
         <!-- WEAKNESSES ATTRIBUTES CONTAINER -->
         <div class="attributes-container">
-            <div class="attribute-title">Fraquezas:</div>
+            <div class="attribute-title">Weaknesses:</div>
             <div class="items-container">
                 <div class="attribute-item" *ngFor="let w of pokemonCard?.weaknesses">
                     {{ w.type }}
@@ -51,7 +51,7 @@
 
         <!-- ATTACKS CONTAINER -->
         <div class="attributes-container">
-            <div class="attribute-title">Ataques:</div>
+            <div class="attribute-title">Attacks:</div>
             <div class="items-container">
                 <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks"
                     (click)="toggleModalAttackDetail(true, a)">
