@@ -1,0 +1,66 @@
+<div class="card-detail-container">
+    <div class="pokemon-profile">
+        <h3 class="pokemon-id">#{{pokemonCard?.id}}</h3>
+        <h1 class="pokemon-name">
+            {{pokemonCard?.name}}
+        </h1>
+
+        <div class="pokemon-card-illustration-container">
+            <app-loader *ngIf="isLoading"></app-loader>
+            <img [src]="pokemonCard?.images.large" [ngClass]="{'visible': !isLoading}" (load)="onImageLoad()"
+                alt="Pokémon card illustration" class="pokemon-card-illustration">
+        </div>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <div class="attributes-wrapper">
+
+        <!-- TYPE ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Types:</div>
+            <div class="items-container">
+                <div class="attribute-item" *ngFor="let t of pokemonCard?.types">
+                    {{ t }}
+                </div>
+            </div>
+        </div>
+
+        <!-- RESISTANCES ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Resistances:</div>
+            <div class="items-container">
+                <div class="attribute-item" *ngFor="let r of pokemonCard?.resistances">
+                    {{ r.type }}
+                </div>
+            </div>
+        </div>
+
+        <!-- WEAKNESSES ATTRIBUTES CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Weaknesses:</div>
+            <div class="items-container">
+                <div class="attribute-item" *ngFor="let w of pokemonCard?.weaknesses">
+                    {{ w.type }}
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ATTACKS CONTAINER -->
+        <div class="attributes-container">
+            <div class="attribute-title">Attacks:</div>
+            <div class="items-container">
+                <div class="attribute-item attack-item" *ngFor="let a of pokemonCard?.attacks"
+                    (click)="toggleModalAttackDetail(true, a)">
+                    {{ a.name }}
+                    <fa-icon [icon]="faAngleRight"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal-attack-detail [attack]="selectedAttack" *ngIf="isModalAttackDetailVisible" (onClose)="toggleModalAttackDetail($event)"></app-modal-attack-detail>
