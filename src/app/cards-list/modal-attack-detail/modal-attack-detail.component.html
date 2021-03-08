@@ -6,13 +6,23 @@
         </div>
 
         <div class="modal-content">
-            <h2 class="subtitle">{{attack.name}}</h2>
-
-            <div class="item-container item-mana-cost">
-                <p class="item-label">Mana cost:</p>
-                <div class="mana-cost-wrapper" *ngFor="let c of attack?.cost">
-                    <img [src]="parseManaCost()" alt="Mana cost">
+            <div class="attack-header-item">
+                <h2 class="subtitle">{{attack.name}}</h2>
+                <div class="energy-cost-wrapper" *ngFor="let c of attack.cost">
+                    <img [src]="parseEnergyCostImg(c)" alt="Energy cost">
                 </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="attack-info-container">
+                <p class="damage-info">
+                    DAMAGE: {{attack.damage.length ? attack.damage : '0'}}
+                </p>
+
+                <p class="description">
+                    {{attack.text}}
+                </p>
             </div>
         </div>
     </div>

@@ -19,8 +19,9 @@ export class ModalAttackDetailComponent implements OnInit {
     console.log(this.attack);
   }
 
-  parseManaCost(name: string) {
-    return `/assets/images/energy-types/${name.toLowerCase}.svg`
+  parseEnergyCostImg(name: string) {
+    const imgURL = '/assets/images/energy-types/'+ name.toLowerCase() + '.svg';
+    return imgURL;
   }
 
   dismissModal() {
