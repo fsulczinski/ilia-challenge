@@ -1,2 +1,15 @@
-<app-pokemon-card-carousel [pokemonCards]="pokemonCards" *ngIf="platformWidth <= 776"></app-pokemon-card-carousel>
-<app-pokemon-card-grid [pokemonCards]="pokemonCards" *ngIf="platformWidth > 776"></app-pokemon-card-grid>
+<div class="search-wrapper">
+    <div class="search-container">
+        <fa-icon [icon]="faSearch"></fa-icon>
+        <input [(ngModel)]="searchQuery" (input)="onQueryEntry()" />
+        <fa-icon class="clear-button" [icon]="faTimes" *ngIf="searchQuery" (click)="clearSearchQuery()"></fa-icon>
+    </div>
+</div>
+
+{{searchQuery | json}}
+
+<app-pokemon-card-carousel [pokemonCards]="pokemonCards" *ngIf="platformWidth <= 776 && !searchQuery">
+</app-pokemon-card-carousel>
+<app-pokemon-card-grid [pokemonCards]="filteredPokemonCards ? filteredPokemonCards : pokemonCards"
+    *ngIf="platformWidth > 776 || searchQuery">
+</app-pokemon-card-grid>

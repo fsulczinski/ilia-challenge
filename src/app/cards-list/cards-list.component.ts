@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { CardsService } from './cards.service';
 
@@ -12,7 +13,12 @@ import { CardsService } from './cards.service';
 export class CardsListComponent implements OnInit {
 
   public pokemonCards: any;
+  public filteredPokemonCards: any;
+  public searchQuery: any;
   public platformWidth = window.innerWidth;
+
+  public faSearch = faSearch;
+  public faTimes = faTimes;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -26,6 +32,18 @@ export class CardsListComponent implements OnInit {
     this.cardsService.getPokemonCards().subscribe((res: any) => {
       this.pokemonCards = res.data
     })
+  }
+
+  onQueryEntry() {
+    if (this.searchQuery.length >= 4) {
+      this.filteredPokemonCards = this.pokemonCards.filter((card: any) => card.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1);
+    } else {
+      this.filteredPokemonCards = this.pokemonCards;
+    }
+  }
+
+  clearSearchQuery() {
+    this.searchQuery = '';
   }
 
 }

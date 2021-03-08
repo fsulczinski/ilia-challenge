@@ -16,6 +16,10 @@
     }
   }
 
+  @media screen and (max-width: 425px) {
+    margin-top: 1rem;
+  }
+
   .card-content {
     display: flex;
     justify-content: space-between;

@@ -5,6 +5,10 @@
   margin: 2rem auto;
   justify-content: space-between;
 
+  @media screen and (max-width: 425px) {
+    justify-content: center;
+  }
+
   &.flex-fix {
     &::after {
       content: "";
