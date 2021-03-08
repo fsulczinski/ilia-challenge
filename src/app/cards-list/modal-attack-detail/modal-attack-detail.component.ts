@@ -10,7 +10,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class ModalAttackDetailComponent implements OnInit {
 
   @Input() attack: any;
-  @Output() modalClosed = new EventEmitter();
+  @Output() closed = new EventEmitter();
+  
   public faTimes = faTimes;
 
   constructor() { }
@@ -24,7 +25,7 @@ export class ModalAttackDetailComponent implements OnInit {
   }
 
   dismissModal(): void {
-    this.modalClosed.emit(false);
+    this.closed.emit(false);
   }
 
 }

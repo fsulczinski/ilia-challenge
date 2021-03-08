@@ -3,4 +3,9 @@
         <h1>PokéTCG</h1>
         <p>DB</p>
     </div>
+
+    <select [ngModel]="appLanguage" (ngModelChange)="setAppLanguage($event)">
+        <option value="en">English</option>
+        <option value="pt-BR">Português</option>
+    </select>
 </header>

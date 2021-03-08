@@ -16,7 +16,7 @@
 
             <div class="attack-info-container">
                 <p class="damage-info">
-                    DAMAGE: {{attack?.damage.length ? attack.damage : '0'}}
+                    {{'damage' | translate}}: {{attack?.damage.length ? attack.damage : '0'}}
                 </p>
 
                 <p class="description" *ngIf="attack.text">
