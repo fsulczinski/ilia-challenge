@@ -31,6 +31,7 @@ export class CardsListComponent implements OnInit {
   ngOnInit(): void {
     this.cardsService.getPokemonCards().subscribe((res: any) => {
       this.pokemonCards = res.data
+      this.pokemonCards.sort((a: any, b: any) => a.name.localeCompare(b.name))
     })
   }
 
