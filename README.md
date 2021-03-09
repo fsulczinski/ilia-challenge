@@ -1,27 +1,38 @@
-# PokeTcg
+# Projeto
+O PokéTCG é um projeto realizado como desafio técnico para a Ília Digital.
+Foi desenvolvido usando [Angular CLI](https://github.com/angular/angular-cli) na versão 11.2.3 e [NodeJS](https://nodejs.org) na versão 14.15.2.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+## Instalação do Projeto
+Passos para a instalação do projeto.
 
-## Development server
+ 1. Clone o repositório.
+`git clone https://github.com/fsulczinski/ilia-challenge.git`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 2. Instale as dependências.
+ `npm install`
 
-## Code scaffolding
+ 3. Rode o projeto para iniciar um servidor de desenvolvimento e navegue para *http://localhost:4200*.
+ `ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuração de ambiente de desenvolvimento
+O PokéTCG consome a [API Pokémon TCG](https://pokemontcg.io), então se faz necessária uma **API Key** de desenvolvedor que você recebe ao se cadastrar [aqui](https://dev.pokemontcg.io/). Você também pode acessar a **documentação** da API Pokémon TCG [aqui](https://docs.pokemontcg.io/).
 
-## Build
+Quando você tiver uma **API Key** você precisa colocála-la no objeto presente no arquivo `environment` na pasta raiz da aplicação pois o serviço da aplicação que consome a API a utiliza como Header.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> {
+>production: false,
+>pokemonAPIBaseURL: ' ',
+>apiKey: 'SUA_API_KEY'
+> }
 
-## Running unit tests
+## Dependências
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O projeto utiliza algumas bibliotecas externas que, a título de conhecimento são:
 
-## Running end-to-end tests
+> - [SwiperJS](https://swiperjs.com/)
+> - [ngx-translate](https://github.com/ngx-translate/core)
+> - [FontAwesome](https://fontawesome.com/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Responsável
+**Felipe Sulczinski**
+matos.szk@gmail.com
