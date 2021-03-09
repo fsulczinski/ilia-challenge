@@ -6,12 +6,15 @@ Foi desenvolvido usando [Angular CLI](https://github.com/angular/angular-cli) na
 Passos para a instalação do projeto.
 
  1. Clone o repositório.
+
 `git clone https://github.com/fsulczinski/ilia-challenge.git`
 
  2. Instale as dependências.
+
  `npm install`
 
  3. Rode o projeto para iniciar um servidor de desenvolvimento e navegue para *http://localhost:4200*.
+ 
  `ng serve`
 
 ## Configuração de ambiente de desenvolvimento
