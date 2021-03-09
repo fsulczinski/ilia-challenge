@@ -18,9 +18,9 @@ Passos para a instalação do projeto.
  `ng serve`
 
 ## Configuração de ambiente de desenvolvimento
-O PokéTCG consome a [API Pokémon TCG](https://pokemontcg.io), então se faz necessária uma **API Key** de desenvolvedor que você recebe ao se cadastrar [aqui](https://dev.pokemontcg.io/). Você também pode acessar a **documentação** da API Pokémon TCG [aqui](https://docs.pokemontcg.io/).
+O PokéTCG consome a [API Pokémon TCG](https://pokemontcg.io), então é necessária uma **API Key** de desenvolvedor que você recebe ao se cadastrar [aqui](https://dev.pokemontcg.io/). Você também pode acessar a **documentação** da API Pokémon TCG [aqui](https://docs.pokemontcg.io/).
 
-Quando você tiver uma **API Key** você precisa colocála-la no objeto presente no arquivo `environment` na pasta raiz da aplicação pois o serviço da aplicação que consome a API a utiliza como Header.
+Quando você tiver uma **API Key** você precisa colocá-la no objeto presente no arquivo `environment` na pasta raiz da aplicação pois o serviço da aplicação que consome a API a utiliza como Header.
 
 > { apiKey: 'SUA_API_KEY' }
 
