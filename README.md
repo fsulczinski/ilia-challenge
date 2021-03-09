@@ -26,12 +26,11 @@ Quando você tiver uma **API Key** você precisa colocá-la no objeto presente n
 
 ## Dependências
 
-O projeto utiliza algumas bibliotecas externas que, a título de conhecimento são:
+O projeto utiliza algumas bibliotecas externas que a título de conhecimento são:
 
 > - [SwiperJS](https://swiperjs.com/)
 > - [ngx-translate](https://github.com/ngx-translate/core)
 > - [FontAwesome](https://fontawesome.com/)
 
 ## Responsável
-**Felipe Sulczinski**
-matos.szk@gmail.com
+**Felipe Sulczinski:** matos.szk@gmail.com
