@@ -14,7 +14,7 @@ Passos para a instalação do projeto.
  `npm install`
 
  3. Rode o projeto para iniciar um servidor de desenvolvimento e navegue para *http://localhost:4200*.
- 
+
  `ng serve`
 
 ## Configuração de ambiente de desenvolvimento
@@ -22,11 +22,7 @@ O PokéTCG consome a [API Pokémon TCG](https://pokemontcg.io), então se faz ne
 
 Quando você tiver uma **API Key** você precisa colocála-la no objeto presente no arquivo `environment` na pasta raiz da aplicação pois o serviço da aplicação que consome a API a utiliza como Header.
 
-> {
->production: false,
->pokemonAPIBaseURL: ' ',
->apiKey: 'SUA_API_KEY'
-> }
+> { apiKey: 'SUA_API_KEY' }
 
 ## Dependências
 
